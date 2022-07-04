@@ -8,7 +8,8 @@ import "./database"
 // con async await
 
 async function main() {
-    await app.listen( process.env.PORT || 3001 )
+    const PORT = process.env.PORT || 8081;
+    await app.listen( PORT || 3001 )
     console.log('server on port:', app.get('port'))
 }
 
