@@ -19,6 +19,9 @@ app.use(cors());
 app.set('port', process.env.PORT || 3001 ) // Method with seting the var / const
 
 //TODO: Routes
+app.get('/', (req, res) => {
+    res.json({ message: 'Api-zafitus start..' })
+});
 
 app.use('/users', userRoutes )
 
