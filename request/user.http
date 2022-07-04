@@ -1,46 +1,97 @@
 ###
-GET http://localhost:3001/dashboard/products
-
-###  
-POST http://localhost:3001/users
+GET http://localhost:3001/users
 Content-type: application/json
-x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNzM0NzA2ZGQxODgzZjM3YzVkODVjNSIsImlhdCI6MTYzNDk0Njg1OCwiZXhwIjoxNjM1MDMzMjU4fQ.MoNZ5HsH40J8YUDnC0cjJAylu6zQt3gjSTZ9jdN-hKc
 
+###
+GET http://localhost:3001/users/62c2249fe35b235a0161368b
 
 ###
 POST http://localhost:3001/users
 Content-type: application/json
-x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNzM0NzA2ZGQxODgzZjM3YzVkODVjNSIsImlhdCI6MTYzNDk0Njg1OCwiZXhwIjoxNjM1MDMzMjU4fQ.MoNZ5HsH40J8YUDnC0cjJAylu6zQt3gjSTZ9jdN-hKc
 
 {
-    "username": "eldiego",
-    "email": "eldiego@test.com",
-    "roles":[
-        "admin",
-        "moderator",
-        "role3"
-    ]
+    "name":"Aldo Gabriel",
+    "last_name":"Martinez",
+    "phone":"2615039594",
+    "certificates":[
+    {
+        "title":"Typescript",
+        "description":"Curso en Udemy"
+    },
+    {
+        "title":"NodeJS",
+        "description":"Curso en Udemy"
+    }
+    ],
+    "work_experiences":[
+    {
+        "type":"programador",
+        "id":"5",
+        "years_worked":7
+    },
+    {
+        "type":"reportero",
+        "id":"12",
+        "years_worked":2
+    },
+    {
+        "type":"pintor",
+        "id":"2",
+        "years_worked":2
+    }
+    ],
+    "links":{
+    "linkedin":"https://www.linkedin.com/in/martinezaldodev/"
+    }
 }
 
 
 
 ###
-GET http://localhost:3001/dashboard/product/616642bdeff4e78a5aea2d02
-
-###
-
-GET http://localhost:3001/dashboard/products
-
-###
-DELETE http://localhost:3001/dashboard/delete/617271be0bb91a8d3c74be78
-x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNzM0NzA2ZGQxODgzZjM3YzVkODVjNSIsImlhdCI6MTYzNDk0NDg0MywiZXhwIjoxNjM1MDMxMjQzfQ.Zy2LW1xx4bsvKHybpd0OKsfZhvOT65BoSeYRYyukWdk
-
-###
-PUT http://localhost:3001/dashboard/product/616e5ba2a2e3f78bdef4e286
+PUT http://localhost:3001/users/62c24aee8a4db0482167c87c
 Content-type: application/json
 
 {
-    "name": "xxxx",
-    "description": "xxxx xxxx xxx x xxxx x",
-    "price": 111
+    "name":"Aldo GDabriel",
+    "last_name":"MaSDrtinez",
+    "phone":"2615039594",
+    "certificates":[
+    {
+        "title":"Typescript",
+        "description":"Curso en Udemy"
+    },
+    {
+        "title":"NodeJS",
+        "description":"Curso en Udemy"
+    }
+    ],
+    "work_experiences":[
+    {
+        "type":"programador",
+        "id":"5",
+        "years_worked":7
+    },
+    {
+        "type":"reportero",
+        "id":"12",
+        "years_worked":2
+    },
+    {
+        "type":"pintor",
+        "id":"2",
+        "years_worked":2
+    }
+    ],
+    "links":{
+    "linkedin":"https://www.linkedin.com/in/martinezaldodev/"
+    }
 }
+
+
+
+###
+
+
+###
+DELETE http://localhost:3001/users/62c2249fe35b235a0161368b
+
