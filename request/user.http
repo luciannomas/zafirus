@@ -1,7 +1,7 @@
 @api = https://zafirus-c.herokuapp.com
 
 ###
-GET {{api}}
+GET https://zafirus-c.herokuapp.com/
 Content-type: application/json
 
 ###
@@ -9,52 +9,47 @@ GET https://zafirus-c.herokuapp.com/users
 Content-type: application/json
 
 ###
-GET {{api}}/users/62c2249fe35b235a0161368b
+GET https://zafirus-c.herokuapp.com/users/62c224aae35b235a0161368d
 
 ###
-POST {{api}}/users
+POST https://zafirus-c.herokuapp.com/users
 Content-type: application/json
 
-{
-    "name":"Aldo Gabriel",
-    "last_name":"Martinez",
-    "phone":"2615039594",
+ {
+    "name":"Gaston mas",
+    "last_name":"Palumbo",
+    "phone":"2615033244",
     "certificates":[
     {
-        "title":"Typescript",
+        "title":"Angular",
         "description":"Curso en Udemy"
     },
     {
-        "title":"NodeJS",
-        "description":"Curso en Udemy"
+        "title":"React Native",
+        "description":"Curso en Platzi"
     }
     ],
     "work_experiences":[
     {
         "type":"programador",
         "id":"5",
-        "years_worked":7
+        "years_worked":3
     },
     {
-        "type":"reportero",
-        "id":"12",
-        "years_worked":2
-    },
-    {
-        "type":"pintor",
+        "type":"peluquero",
         "id":"2",
-        "years_worked":2
+        "years_worked":1
     }
     ],
     "links":{
-    "linkedin":"https://www.linkedin.com/in/martinezaldodev/"
+    "linkedin":"https://www.linkedin.com/in/gastonpalumbo/"
     }
 }
 
 
 
 ###
-PUT {{api}}/users/62c24aee8a4db0482167c87c
+PUT https://zafirus-c.herokuapp.com/users/62c24aee8a4db0482167c87c
 Content-type: application/json
 
 {
@@ -99,5 +94,5 @@ Content-type: application/json
 
 
 ###
-DELETE {{api}}/users/62c2249fe35b235a0161368b
+DELETE https://zafirus-c.herokuapp.com/users/62c2249fe35b235a0161368b
 
