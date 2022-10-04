@@ -1,5 +1,39 @@
 import User from "../models/Users"
+const multer = require('multer');
+const path = require('path');
 
+const storage = multer.diskStorage({
+    destination: 'src/public/uploads',
+    filename:  (req, file, cb) => {
+        cb(null, file.originalname);
+    }
+})
+
+const uploadImage = multer({
+    storage,
+    limits: {fileSize: 6000000}
+}).single('avatar');
+
+
+export const uploadoImage = async ( req, res ) => {
+    
+    /* try {
+       console.log("file", req.file)
+        return res.json('ok')
+        
+    } catch (error) {
+        return res.status(400).json({ msg: error.message });
+    } */
+    uploadImage(req, res, (err) => {
+        if (err) {
+            err.message = 'The file is so heavy for my service';
+            return res.send(err);
+        }
+        console.log(req.file);
+        res.send('uploaded');
+    });
+
+} 
 
 export const createUsers = async ( req, res ) => {
     
